@@ -1,0 +1,25 @@
+//### POTD #1 ► 01/01/2024
+//Task 1️⃣ : [Find Second Largest](https://practice.geeksforgeeks.org/problems/second-largest3735/1)
+//Constraints:
+//2 ≤ N ≤ 105
+//1 ≤ Arri ≤ 105
+//Topic : array sorting
+class Solution{
+public:	
+	// Function returns the second
+	// largest elements
+	int print2largest(int arr[], int n) {
+	    // code here
+	    int flag=0;
+	    int sum;
+	 sort(arr,arr+n);
+	 for(int i=n-1;i>=0;i--){
+	     int a=abs(i-1);
+	     if(arr[a]!=arr[i]){
+	        sum=arr[i-1];
+	       // flag=1;
+	       // break;
+	       return sum;
+	     }
+	 }
+	 return -1;
